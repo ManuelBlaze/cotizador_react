@@ -1,11 +1,15 @@
-import React from 'react';
+import React, {Fragment, useState} from 'react';
+import Header from "./components/Header";
 
 
 function App() {
   return (
-    <div className="App">
-    
-    </div>
+    <Fragment>
+      <Header 
+        titulo="Cotizador de Seguros"
+      />
+
+    </Fragment>
   );
 }
 
