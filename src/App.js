@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styled from "@emotion/styled";
 import Header from "./components/Header";
 import Formulario from "./components/Formulario";
+import Resumen from "./components/Resumen";
+import Resultado from "./components/Resultado";
 
 const Contenedor = styled.div`
   max-width: 600px;
@@ -15,6 +17,19 @@ const ContenedorFormulario = styled.div`
 
 
 function App() {
+
+  const [resumen, setResumen] = useState({
+    cotizacion : 0,
+    datos: {
+      marca: '',
+      year: '',
+      plan: ''
+    }
+  });
+
+  //Extraer datos
+  const {cotizacion, datos} = resumen;
+
   return (
     <Contenedor>
       <Header 
@@ -22,12 +37,20 @@ function App() {
       />
 
       <ContenedorFormulario>
-        <Formulario>
-          
-        </Formulario>
+        
+        <Formulario 
+          setResumen = {setResumen}
+        />
+
+        <Resumen 
+          datos = {datos}
+        />
+
+        <Resultado 
+          cotizacion = {cotizacion}
+        />
 
       </ContenedorFormulario>
-
     </Contenedor>
   );
 }

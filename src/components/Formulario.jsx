@@ -53,7 +53,7 @@ const Error = styled.div`
     border-radius: .5rem;
 `;
 
-const Formulario = () => {
+const Formulario = ({setResumen}) => {
 
     const [datos, setDatos] = useState({
         marca: '',
@@ -106,6 +106,10 @@ const Formulario = () => {
         console.log(resultado);
 
         //Total
+        setResumen({
+            cotizacion : resultado,
+            datos
+        })
     }
 
     return (
