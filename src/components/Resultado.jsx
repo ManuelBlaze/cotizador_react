@@ -38,7 +38,7 @@ const Resultado = ({cotizacion}) => {
             (   
                 <ResultadoCotizacion>
                     <TransitionGroup
-                        component="p"
+                        component="div"
                         className="resultado"
                     >
                         <CSSTransition
