@@ -1,3 +1,7 @@
+<h1>Cotizador Seguro de Automoviles</h1>
+
+Proyecto de Practica React
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
